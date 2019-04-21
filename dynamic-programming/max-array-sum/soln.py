@@ -6,6 +6,9 @@ import random
 import re
 import sys
 
+# Let $S_k$ be the maximum sum of subsets up to $a_k$, then
+#  S_k = max\{ S_{k-2}, a_k, S_{k-2} + a_k, S_{k-1} \}
+# Then build up the solution from $0$, to $n = len(arr)$.
 def maxSubsetSum(arr: [int]):
     tbl = [None] * len(arr)
     tbl[0] = arr[0]
