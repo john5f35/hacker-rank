@@ -19,7 +19,7 @@ def abbreviation(a, b):
     tbl.update({(-1, j): False for j in range(len(b))})
 
     for j in range(len(b)):
-        for i in range(len(a)):
+        for i in range(len(a) - len(b) + j + 1):
             res = _sub(i, j)
             tbl[(i, j)] = res
 
